@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS Crimedb;
+CREATE EXTERNAL TABLE Crimedb(datereported STRING, Drno BIGINT, dateoccured STRING, timeoccur STRING, Area STRING, areaname STRING, RD INT, crm_cd INT, crm_CD_Description STRING, Status STRING, Status_desc STRING, crm_location STRING, Cross_Street STRING, physical_location STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION 'wasb://crimedataset@gradstudy.blob.core.windows.net/crime/Crimedb';
